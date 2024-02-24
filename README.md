@@ -13,3 +13,9 @@ Spring WebServerApplicationContext(I) is the container for web application.
 
 @SpringBootApplication --> same as above, all the 3 annotations are present in this annotation.
 
+# Properties file
+@PropertySource("abc.properties")  --> loading random properties file to spring.
+
+# to run the jar file not present in fat jar
+java -jar abc.jar --spring.config.location=/def/ghy/xxx/a.properties  --> to use th poperties file run time
+
