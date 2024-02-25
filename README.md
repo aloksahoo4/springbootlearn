@@ -19,3 +19,7 @@ Spring WebServerApplicationContext(I) is the container for web application.
 # to run the jar file not present in fat jar
 java -jar abc.jar --spring.config.location=/def/ghy/xxx/a.properties  --> to use th poperties file run time
 
+# spring life cycle hooks annotations.
+@PostConstruct  --> initilizing anything or execute anyting after bean creation in the container by dispatcher servlet.
+@PreDestroy --> execute anyting just before bean deletion in the container (when container also being closed) by dispatcher servlet.
+
