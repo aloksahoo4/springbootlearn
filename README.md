@@ -27,5 +27,9 @@ java -jar abc.jar --spring.config.location=/def/ghy/xxx/a.properties  --> to use
 Autoconfiguration file which has list of all autoconfiguration classes.
 if you mark the spring application with @EnableAutoConfiguration, it reads the file and create the objects.
 spring boot uses intelligence, it does not create object which you do not require.
-it uses annotation @ConditionalOnclass(Servlet.class), to check if maven dependency added/servlet class file added to the dependency or not, the only it creates object in the autoconfigure process, otherwise it wont create.
+it uses annotation @ConditionalOnclass(Servlet.class), to check if maven dependency added/servlet class file added to the dependency( available ini the class path) or not, then only it creates object in the autoconfigure process, otherwise it wont create.
+@ConditionalOnBean
+@CondiionalMissingClass
 
+@Autoconfiguration is not equal to @configuration
+inside @AutoConfiguration in contains @Configuration(proxyBeanMethods=false)
